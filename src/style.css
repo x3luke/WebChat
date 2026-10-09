@@ -1,0 +1,152 @@
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #F5F7FA;
+  background: #0B0D0F;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button {
+  font: inherit;
+}
+
+.app {
+  width: min(1100px, 90%);
+  margin: 0 auto;
+  padding: 100px 0 32px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.logo {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 20px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #5B9FE8;
+  border-radius: 14px;
+  color: #5B9FE8;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: clamp(36px, 5vw, 56px);
+  letter-spacing: -2px;
+}
+
+.header p {
+  margin-top: 14px;
+  color: #9299A3;
+  font-size: 16px;
+}
+
+.rooms {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: 20px;
+}
+
+.room-card {
+  min-height: 250px;
+  padding: 28px;
+  text-align: left;
+  color: inherit;
+  background: #171A1E;
+  border: 1px solid #292D33;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: border-color 180ms ease, transform 180ms ease;
+}
+.room-card hover{
+  border-color: #5B9FE8;
+  transform: translateY(-4px);
+}
+
+.room-icon {
+  display: inline-block;
+  margin-bottom: 28px;
+  color: #5B9FE8;
+  font-size: 13px;
+  letter-spacing: 2px;
+}
+
+.room-card h2 {
+  margin: 0 0 12px;
+  font-size: 21px;
+}
+
+.room-card p {
+  min-height: 44px;
+  margin: 0 0 24px;
+  color: #9299A3;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.open-link {
+  color: #8EC5FF;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: auto;
+  padding-top: 64px;
+  color: #9299A3;
+  font-size: 12px;
+  text-align: center;
+}
+
+.status-dot {
+  width: 7px;
+  height: 7px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #70C99A;
+}
+
+@media (max-width: 750px) {
+  .app {
+    padding-top: 56px;
+  }
+  .header {
+    margin-bottom: 40px;
+  }
+
+  .rooms {
+    grid-template-columns: 1fr;
+  }
+
+  .room-card {
+    min-height: 210px;
+  }
+
+  footer {
+    padding-top: 40px;
+  }
+}
